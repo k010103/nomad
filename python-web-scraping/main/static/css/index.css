@@ -41,9 +41,6 @@
 	margin-bottom: 20px;
 }
 
-.index__text i {
-	font-size: 40px;
-}
 
 .index__text a {
 	margin: 30px 10px;
@@ -61,15 +58,15 @@
 	font-size: 30px;
 }
 
-.index__text a:nth-child(2) {
+.index__text a:nth-child(1) {
 	color: orange;
 }
 
-.index__text a:nth-child(3) {
+.index__text a:nth-child(2) {
 	color: black;
 }
 
-.index__text a:nth-child(4) {
+.index__text a:nth-child(3) {
 	color: red;
 	-webkit-text-stroke-color: black;
 	padding: 0px 3px;

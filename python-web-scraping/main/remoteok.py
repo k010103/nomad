@@ -35,7 +35,10 @@ def extract_jobs(url):
 	print(result.url)
 	print(f"scrapping REMOTEOK....")
 	soup = BeautifulSoup(result.text, "html.parser")
-	job_list = soup.find("table", id="jobsboard").find_all("td", class_="company position company_and_position")
+	try:
+		job_list = soup.find("table", id="jobsboard").find_all("td", class_="company position company_and_position")
+	except:
+		return []
 	for job in job_list:
 		result = extract_job(job)
 		if result:
