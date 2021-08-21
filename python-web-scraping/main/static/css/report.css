@@ -1,0 +1,163 @@
+#report {
+	background-color: rgb(200, 219, 230);
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+header {
+	background-color: cornflowerblue;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	font-weight: bold;
+	color: white;
+}
+
+.report-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.report-header__title {
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+
+.report-header_link {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.report-header_link i {
+	margin: 5px;
+}
+
+.report-header_link a {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: white;
+}
+
+.report-header_link a:hover {
+	color: mediumpurple;
+}
+
+.reoprt-jobs {
+	display: flex;
+	flex-direction: column;
+}
+
+.report-job {
+	background-color: white;
+	width: 100%;
+	height: 150px;
+	padding: 10px 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	box-sizing: border-box;
+	margin: 20px;
+	border-radius: 20px;
+	font-weight: bold;
+	position: relative;
+}
+
+.report-job__info {
+	display: flex;
+	flex-direction: column;
+}
+
+.report-job__title {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+
+.report-job__location {
+	margin-bottom: 10px;
+}
+
+.report-job__info i {
+	text-align: right;
+	position: absolute;
+	transform:rotate(90deg);
+	font-size: 90px;
+	right: 0;
+	color: white;
+}
+
+.Plane-ticket {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-bottom: 30px;
+	margin-right: 200px;
+	font-size: 40px;
+	color: white;
+	vertical-align:middle;
+}
+
+
+@keyframes aircraft_fly {
+	form {
+		color: black;
+		margin-right: 100px;
+	}
+	to {
+		color: white;
+		margin-right: 100%;
+	}
+}
+
+@keyframes back_aircraft_fly {
+	form {
+		color:blue;
+		background-color: white;
+	}
+	to {
+		color:white;
+		background-color: skyblue;
+	}
+}
+
+@keyframes font_aircraft_fly {
+	form {
+		color:skyblue;
+		background-color: white;
+	}
+	to {
+		color:white;
+		background-color: skyblue;
+	}
+}
+
+.report-job__airplane {
+	display: flex;
+	margin: auto 0 0 auto;
+	color: black;
+	transform:rotate(180deg);
+	margin-bottom: 10px;
+	font-size: 40px;
+}
+
+.report-job:hover .report-job__airplane {
+	animation: aircraft_fly 2s ease-in-out forwards;
+}
+
+.report-job:hover {
+	animation: back_aircraft_fly 1s ease-in-out forwards;
+}
+
+.report-job:hover .report-job__info * {
+	animation: font_aircraft_fly 4s ease-in-out forwards;
+}

@@ -1,0 +1,20 @@
+.badge {
+	background-color: tomato;
+	width: 25px;
+	height: 25px;
+	border-radius: 12.5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 600;
+}
+
+.point {
+	background-color: tomato;
+	display: flex;
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	position: absolute;
+}
