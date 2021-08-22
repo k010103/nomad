@@ -27,6 +27,7 @@ header {
 .report-header__title {
 	font-size: 50px;
 	margin-bottom: 10px;
+	margin-top: 0px;
 }
 
 .report-header_link {
@@ -40,15 +41,17 @@ header {
 }
 
 .report-header_link a {
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-bottom: 10px;
+	margin: 12px 20px;
 	text-decoration: none;
+	padding: 5px;
+	border-radius: 5px;
+	font-weight: bold;
 	color: white;
 }
 
 .report-header_link a:hover {
-	color: mediumpurple;
+	background-color: rgb(200, 219, 230);
+	color: cornflowerblue;
 }
 
 .reoprt-jobs {
@@ -62,10 +65,10 @@ header {
 	height: 150px;
 	padding: 10px 50px;
 	display: flex;
+	box-sizing: border-box;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
-	box-sizing: border-box;
 	margin: 20px;
 	border-radius: 20px;
 	font-weight: bold;

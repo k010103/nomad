@@ -24,7 +24,7 @@ def extract_job(html):
 		"title": title,
 		"company": company,
 		"location": location,
-		"apply_link": f"https://remoteok.io/{link}",
+		"apply_link": f"https://remoteok.io{link}",
 	}
 
 
