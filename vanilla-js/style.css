@@ -1,7 +1,17 @@
+/* CSS */
+
 body {
 	background-color: beige;
 }
 
-.active {
+h1 {
+	color: orange;
+}
+
+.clicked {
 	color: cornflowerblue;
+}
+
+.sexy-font {
+	font-family: 'Courier New', Courier, monospace;
 }

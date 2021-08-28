@@ -1,28 +1,10 @@
 const h1 = document.querySelector("div.hello h1");
-
 function handTitleClick() {
-	h1.style.color = "blue";
-}
-
-function handleMouseEnter() {
-	h1.innerText = "Mouse is here!";
-}
-
-function handleMouseLeave() {
-	h1.innerText = "Mouse is gond!";
-}
-
-function handleWindowResize() {
-	document.body.style.backgroundColor = "tomato";
-}
-
-function handleWindowCopy() {
-	alert("copy!");
+	const clickedClass = "clicked"
+	h1.classList.toggle(clickedClass);
 }
 
 h1.addEventListener("click", handTitleClick);
-h1.addEventListener("mouseenter", handleMouseEnter);
-h1.addEventListener("mouseleave", handleMouseLeave);
 
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
+console.log(document.querySelector(".home h1:first-child"));
+// console.log(document.querySelectorAll(".home h1:first-child"));
