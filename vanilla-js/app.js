@@ -1,10 +1,16 @@
-const h1 = document.querySelector("div.hello h1");
-function handTitleClick() {
-	const clickedClass = "clicked"
-	h1.classList.toggle(clickedClass);
+const loginForm = document.querySelector(".login-form");
+const loginInput = loginForm.querySelector("input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
+
+function onLoginSubmit(event) {
+	event.preventDefault();
+	loginForm.classList.add(HIDDEN_CLASSNAME);
+	const username = loginInput.value;
+	greeting.innerText = `Hello ${username}`;
+	greeting.classList.remove(HIDDEN_CLASSNAME);
+
 }
 
-h1.addEventListener("click", handTitleClick);
-
-console.log(document.querySelector(".home h1:first-child"));
-// console.log(document.querySelectorAll(".home h1:first-child"));
+loginForm.addEventListener("submit", onLoginSubmit);
