@@ -1,0 +1,65 @@
+from logging import error, exception
+from flask import Flask, render_template, request, redirect, send_file
+from so import get_so_jobs
+from wwr import get_wwr_jobs
+from remoteok import get_remoteok_jobs
+from exporter import save_to_file
+
+app = Flask("SuperScrapper")
+
+db = {}
+
+@app.route("/")
+def	home():
+	return render_template("index.html")
+
+
+@app.route("/report")
+def report():
+	word = request.args.get("word")
+	if word:
+		word = word.lower()
+		existing_jobs = db.get(word)
+		if existing_jobs:
+			jobs = existing_jobs
+		else:
+			so_jobs = get_so_jobs(word)
+			wwr_jobs = get_wwr_jobs(word)
+			remoteok_jobs = get_remoteok_jobs(word)
+			jobs = so_jobs + wwr_jobs + remoteok_jobs
+			db[word] = jobs
+	else:
+		return render_template("/")
+	return render_template(
+		"report.html", 
+		SearchingBy = word,
+		resultsNumber = len(jobs),
+		jobs = jobs,
+	)
+
+
+@app.route("/export")
+def	export():
+	try:
+		word = request.args.get('word')
+		if not word:
+			raise exception()
+		word = word.lower()
+		jobs = db.get(word)
+		if not jobs:
+			raise exception()
+		save_to_file(word, jobs)
+		return send_file(f"{word}-jobs.csv", as_attachment=True)
+	except:
+		return redirect("/")
+
+app.run()
+# app.run(host="0.0.0.0")
+
+# def		main():
+# 	word = "Django"
+# 	jobs = get_remoteok_jobs(word)
+# 	print(jobs)
+# 	pass
+
+# main()
