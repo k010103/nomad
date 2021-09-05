@@ -12,7 +12,7 @@ function onGeoOk(position) {
 			const city = document.querySelector("#weather span:last-child");
 			const temperature = data.main.temp;
 			city.innerText = data.name;
-			weather.innerText = `${data.weather[0].main} / ${temperature}`;
+			weather.innerText = `${data.weather[0].main} / ${temperature}°`;
 	});
 }
 

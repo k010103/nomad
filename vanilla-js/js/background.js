@@ -1,13 +1,14 @@
 const images = [
-	"0.jpeg",
-	"1.jpeg",
-	"2.jpeg",
+	"0.gif",
+	"1.gif",
+	"2.gif",
 ]
-
+const body = document.body;
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
-const bgImage = document.createElement("img");
+// const bgImage = document.createElement("img");
+// body.style.backgroundImage = `url(static/img/Calcifer.gif)`;
+body.style.backgroundImage = `url(static/img/${chosenImage})`;
+// bgImage.src = `img/${chosenImage}`;
 
-bgImage.src = `img/${chosenImage}`;
-
-document.body.appendChild(bgImage);
+// document.body.appendChild(bgImage);

@@ -1,0 +1,92 @@
+body {
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0px;
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+	position: relative;
+	overflow: hidden; 
+	text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+body * {
+	font-family: 'Keania One', cursive;
+	font-size: 25px;
+}
+
+
+#clock {
+	font-size: 120px;
+	margin-bottom: 0px;
+}
+
+
+#login-form input {
+	width: 600px;
+	height: 50px;
+	border-radius: 10px;
+	padding: 0 30px;
+	margin-bottom: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+	font-size: 25px;
+}
+
+/* #login-form input:active,
+#login-form input:hover
+{
+	background-color: black;
+	color: white;
+} */
+
+#greeting {
+	font-size: 80px;
+	margin: 20px 0px;
+} 
+
+#weather {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#quote {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#todo-form {
+	display: flex;
+	margin: 10px 0px;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+#todo-list li span {
+	margin: 0px 5px;
+}
+
+#todo-list li button {
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: transparent;
+    border: none;
+    color: #FFFFFF;
+}
+
+#weather {
+	margin: 10px 0px;
+}
+
+.hidden {
+	display: none;
+}
