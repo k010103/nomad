@@ -19,4 +19,10 @@ function onGeoOk(position) {
 function onGeoError() {
 	alert("can't find you. No weather for you.")
 }
+
+function changeColor() {
+	weather.style.color = colors[Math.floor(Math.random() * colors.length)];
+}
+
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+setInterval(changeColor, 200);
