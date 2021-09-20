@@ -1,12 +1,10 @@
 package main
 
-import (
-	"fmt"
+import "fmt"
 
-	"github.com/k010103/learngo/test"
-)
+var name string = "jun"
 
 func main() {
-	test.Test1()
-	fmt.Println("HELLO")
+	name := "jun"
+	fmt.Println(name)
 }
